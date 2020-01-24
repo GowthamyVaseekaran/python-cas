@@ -131,7 +131,7 @@ class CASClientV1(CASClientBase):
         Returns username on success and None on failure.
         """
         params = [('ticket', ticket), ('service', self.service_url)]
-        url = (urllib_parse.urljoin(self.server_url, 'serviceValidate') + '?' +
+        url = (urllib_parse.urljoin(self.server_url, 'p3/serviceValidate') + '/' +
                urllib_parse.urlencode(params))
         print("test")
         print(url)
