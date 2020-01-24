@@ -133,6 +133,8 @@ class CASClientV1(CASClientBase):
         params = [('ticket', ticket), ('service', self.service_url)]
         url = (urllib_parse.urljoin(self.server_url, 'serviceValidate') + '?' +
                urllib_parse.urlencode(params))
+        print("test")
+        print(url)
         page = requests.get(
             url,
             stream=True,
